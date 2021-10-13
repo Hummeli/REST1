@@ -12,8 +12,8 @@ splitLines.forEach((line) => {
   const sanat = line.split(" ");
   console.log(sanat);
   const sana = {
-    eng: sanat[0],
-    fin: sanat[1],
+    fin: sanat[0],
+    eng: sanat[1],
   };
   sanakirja.push(sana);
   console.log(sanakirja);
