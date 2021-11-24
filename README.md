@@ -1,6 +1,4 @@
-# REST1
-
-Web-ohjelmointi, LTD7003-3001, syksy 2021
+# REST1 Web-ohjelmointi, LTD7003-3001, syksy 2021
 
 --
 
