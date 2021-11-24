@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('[name="Get"]').click(function () {
+          const sana = $(`[name = "fi"]`).val();
+          $.ajax({
+            // Tehdään ajax pyyntö allaolevaan urliin
+            url: `http://localhost:3000/sanat/${sana}`,
+            type: "GET",
+
+            // Jos onnistuu, tulostetaan printti sivulle
+            success: function (sana) {
+              console.log(sana);
+              if (sana.message !== undefined)
+                $('[id="kaannos"]').text(sana.message);
+              else $('[id="kaannos"]').text("Englanniksi: " + sana);
+            },
+
+            // Jos epäonnistuu, tulostetaan consoleen virhe
+            error: function (xhr, resp, text) {
+              console.log(xhr, resp, text);
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="tab">
+      <button class="tablinks" onclick="window.location.href='haku.html'">
+        Haku
+      </button>
+      <button class="tablinks" onclick="window.location.href='lisaus.html'">
+        Lisää
+      </button>
+    </div>
+    <hr size="10" width="69%" color="white" />
+    <form sana="sana">
+      <th>Hae sana</th>
+      <td>
+        <input
+          sana=""
+          name="fi"
+          id="fin"
+          type="text"
+          value=""
+          maxlength="35"
+          size="35"
+        />
+      </td>
+      <td>
+        <input name="Get" type="button" value="Hae" />
+      </td>
+      <p id="kaannos"></p>
+    </form>
+  </body>
+</html>
