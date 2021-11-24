@@ -1,0 +1,85 @@
+body {
+  background: rgb(197, 122, 23);
+  color: #fff;
+  font-family: arial;
+  line-height: 1.4em;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.clr {
+  clear: both;
+}
+
+#container {
+  background: rgb(150, 85, 255);
+  width: 960px;
+  margin: 30px auto;
+  overflow: hidden;
+  padding: 10px;
+}
+
+#nav {
+  height: 40px;
+  background: rgb(136, 255, 0);
+}
+
+#nav ul {
+  padding-top: 13px;
+  padding-left: 10px;
+}
+
+#nav li {
+  list-style: none;
+  float: left;
+  padding-right: 20px;
+}
+
+#nav .active {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+#main {
+  float: left;
+  width: 60%;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+  background: rgb(115, 47, 136);
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#footer {
+  text-align: center;
+  padding: 10px;
+  background: rgb(255, 0, 0);
+  margin-top: 30px;
+}
+
+.opintojaksot li {
+  border-bottom: 2px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+}
+.opintojaksot a {
+  background: rgb(0, 255, 64);
+  padding: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+}
